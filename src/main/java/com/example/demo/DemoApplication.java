@@ -1,11 +1,18 @@
 package com.example.demo;
 
-import com.example.demo.repository.CashierRepository;
-import com.example.demo.repository.CustomerRepository;
+import com.example.demo.model.Course;
+import com.example.demo.model.Student;
+import com.example.demo.model.User;
+import com.example.demo.repository.CourseMaterialRepository;
+import com.example.demo.repository.CourseRepository;
+import com.example.demo.repository.StudentRepository;
+import com.example.demo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.util.List;
 
 @SpringBootApplication
 public class DemoApplication implements CommandLineRunner {
@@ -15,20 +22,42 @@ public class DemoApplication implements CommandLineRunner {
 	}
 
 	@Autowired
-	private CustomerRepository customerRepository;
+	private StudentRepository studentRepository;
 
 	@Autowired
-	private CashierRepository cashierRepository;
+	private CourseRepository courseRepository;
+
+	@Autowired
+	private CourseMaterialRepository courseMaterialRepository;
+
+	@Autowired
+	private UserRepository userRepository;
 
 	@Override
 	public void run(String... args) throws Exception {
-//		Customer customer = new Customer();
-//		customer.setFirstName("John");
-//		customer.setLastName("Doe");
-//		customer.setGender("Male");
-//		customer.setDob("10/20/1992");
-//		customer.setAddress("200 Oak Ridge Apts");
-//		customer.setPhoneNumber("997-889-6780");
-//		customerRepository.save(customer);
+//		Student student = new Student();
+//		student.setFirstName("John");
+//		student.setLastName("Doe");
+//		student.setGender("Male");
+//		student.setDob("10/20/1992");
+//		student.setG_name("James Doe");
+//		student.setG_email("james@gmail.com");
+//		student.setAddress("200 Oak Ridge Apts");
+//		student.setEmail("john@yahoo.com");
+//		student.setPhoneNumber("997-889-6780");
+//		studentRepository.save(student);
+//		List<Student> students = studentRepository.findByGender("Male");
+//		System.out.println(students);
+//		printStudentByFirstName();
+
+//		User user = new User();
+//		user.setFirstName("ram");
+//		user.setLastName("shah");
+//		user.setEmail("ram@gmail.com");
+//		user.setPassword("1234");
+//		userRepository.save(user);
+
 	}
+
+
 }
