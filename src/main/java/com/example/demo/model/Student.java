@@ -7,22 +7,14 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-import javax.persistence.Entity;
-import javax.persistence.Table;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "cashiers")
-
-public class Cashier {
+@Table(name = "customers")
+public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,11 +26,14 @@ public class Cashier {
     @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "username")
-    private String username;
+    @Column(name = "sex")
+    private String gender;
 
-    @Column(name = "c_pass")
-    private String c_pass;
+    @Column(name = "date_of_birth")
+    private String dob;
+
+    @Column(name = "acc_type")
+    private String account;
 
     @Column(name = "address")
     private String address;
